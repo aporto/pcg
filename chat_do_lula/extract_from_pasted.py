@@ -49,9 +49,9 @@ with open("lula_chat.csv", "w") as f:
 # save to html format
 with open("lula_chat.html", "w") as f:
     f.write("<html><head></head><body><table>\n")
-    for (name, text, likes) in lula_chat:
+    for idx, (name, text, likes) in enumerate(lula_chat):
         #name, text, likes = line.split("\t")
-        f.write("<tr><td>%s</td><td>%s</td><td>%s</td></tr>\n" % (name, text, likes))
+        f.write("<tr><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>\n" % (idx+1, name, text, likes))
     f.write("</table></body></html>\n")
 
 # save statistics
