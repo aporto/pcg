@@ -30,11 +30,11 @@ with open("lula_chat.csv", "w") as f:
         f.write("%s\n" % line)
 
 with open("lula_chat.html", "w") as f:
-    f.write("<head></head><body><table>\n")
+    f.write("<html><head></head><body><table>\n")
     for line in lula_chat:
         name, text = line.split("\t")
         f.write("<tr><td>%s</td><td>%s</td></tr>\n" % (name, text))
-    f.write("</table></body>\n")
+    f.write("</table></body></html>\n")
 
 print "Done!"
 
