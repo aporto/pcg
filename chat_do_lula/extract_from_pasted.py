@@ -41,6 +41,7 @@ for idx,line in enumerate(lines[1:]):
 # Save to csv format
 with open("lula_chat.csv", "w") as f:
     #for line in lula_chat:
+    f.write("sep=\t\n")
     f.write("Nome\tTexto\tLikes\n")
     for (name, text, likes) in lula_chat:
         f.write("%s\t%s\t%s\n" % (name, text, likes))
